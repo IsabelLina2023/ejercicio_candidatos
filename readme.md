@@ -1,24 +1,26 @@
-# Desafío Mi repertorio
+# Guía de ejercicios - Trabajo práctico (II)
 
-Prueba de Desafío LATAM, que solicita los sgtes. requerimientos:
+Actividad guiada: Elecciones presidenciales
 
-Desarrollar un servidor con Express, usando el paquete pg para conectarse con PostgreSQL y funciones asíncronas para hacer las consultas a una base de datos.
+Para implementar este ejercicio, primero, crearemos un archivo llamado queries.js para gestionar las funciones asíncronas y la lógica de la base de datos utilizando el paquete pg. 
+Luego se crea el servidor Express.
+Se crea una base de datos llamada candidatos y las tablas necesarias. 
 
 ## Descripción del proyecto
 
-Trabajo enfocado solo en el BackEnd.
-
-Se crea base de datos llamada repertorio y tabla llamada canciones.
-
-Se disponibilizan las siguientes rutas:
+Se usan herramientas como Postman para probar las rutas creadas.
 ●
-POST /cancion: Recibe los datos correspondientes a una canción y realiza la inserción en la tabla canciones.
+POST /candidato: Agrega un nuevo candidato.
 ●
-GET /canciones: Devuelve un JSON con los registros de la tabla canciones.
+GET /candidatos: Obtiene la lista de todos los candidatos.
 ●
-PUT /cancion: Recibe los datos de una canción que se desea editar y ejecuta una función asíncrona para hacer la consulta SQL, actualizando ese registro en la tabla canciones.
+DELETE /candidato?id=1: Elimina el candidato con el ID especificado.
 ●
-DELETE /cancion: Recibe por queryString el id de una canción y realiza una consulta SQL a través de una función asíncrona para eliminarla de la base de datos.
+PUT /candidato: Actualiza los datos de un candidato.
+●
+POST /votos: Agrega votos y actualiza el historial.
+●
+GET /historial: Obtiene el historial de votos.
 
 
 Realizado por: Norma Isabel Rojas 🌞
